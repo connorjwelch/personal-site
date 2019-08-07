@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./ui/Header";
 
-function App() {
+const menuItems = [
+  {
+    label: "Resume",
+    key: "item1"
+  },
+  {
+    label: "Projects",
+    key: "item2"
+  },
+  {
+    label: "About Me",
+    key: "item3"
+  }
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header title="Connor Welch" menuItems={menuItems} />
+      <h1> Test Page </h1>
     </div>
   );
-}
+};
 
 export default App;
